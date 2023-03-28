@@ -6,7 +6,6 @@ import fetchJson from "lib/fetchJson";
 
 export default function Header() {
   const { user, mutateUser } = useUser();
-  const router = useRouter();
 
   return (
     <header>
@@ -64,7 +63,7 @@ export default function Header() {
                       await fetchJson("/api/logout", { method: "POST" }),
                       false,
                     );
-                    router.push("/login");
+
                   }}
                 >
                   Logout
